@@ -4,8 +4,7 @@ body {
 .container {
     max-width: 1143px;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px;
     color: #2B3541;
 }
 .header {
@@ -82,7 +81,6 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    margin-bottom: 160px;
 }
 .button {
     background-image: url(../images/svg/arrow.svg);
@@ -155,96 +153,136 @@ body {
     top: 40px;
 }
 /* Ближайшие события */
-h2 {
+.events {
+    margin-top: 154px;
+}
+.section-title {
+    max-width: 470px;
     font-size: 40px;
     font-weight: 700;
-    margin: 0;
+    line-height: 1.3;
+    letter-spacing: 0.09px;
+    margin-bottom: 39px;
 }
-.event {
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-}
-.cover-left {
-    background-image: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.3) 30%), url(../images/maraphon.png);
-    height: 598px;
-    width: 366px;
-    position: relative;   
-}
-.cover-center {
-    background-image: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.3) 30%), url(../images/Vebinar.png);
-    height: 598px;
-    width: 366px;
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 600px;
+    gap: 20px;
     position: relative;
 }
-.cover-right {
-    background-image: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.3) 30%), url(../images/Vebinar2.png);
-    height: 598px;
-    width: 366px;
+.events-grid__item {
     position: relative;
 }
-.cover-left:hover {
-    background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.6) 60%), url(../images/maraphon.png);
-}
-.cover-center:hover {
-    background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.6) 60%), url(../images/Vebinar.png);
-}
-.cover-right:hover {
-    background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.6) 60%), url(../images/Vebinar2.png);
-}
-.event-link {
+.events-grid__gradient {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    text-decoration: none;
-    color: #FBF138;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 700;
-    background: #2B3541;
-    box-shadow: 0px 13px 24px rgba(70, 86, 106, 0.28);
-    padding: 20px 49px;
-    opacity: 0;
-    transition: .2s;
+    background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%);   
+ }  
+ .events-grid__cover:hover .events-grid__gradient{
+    background: linear-gradient(180deg, rgba(251, 241, 56, .6) 0%, rgba(253, 249, 182, 0) 100%);  
+ }
+.events-grid__cover {
+    overflow: hidden;
 }
-.cover-left:hover a,
-.cover-center:hover a,
-.cover-right:hover a {
-    text-decoration: none;
-    color: #FBF138;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 700;
-    background: #2B3541;
-    box-shadow: 0px 13px 24px rgba(70, 86, 106, 0.28);
-    padding: 20px 49px;
-    opacity: 1;
+.marathon {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-image:url(../images/maraphon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
-.event-link {
-    margin-top: 45px;
+.coahc {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-image: url(../images/Vebinar.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
-.event-desk {
-    padding-left: 30px;
-    padding-top: 30px;
+.yoga {
+    background-image: url(../images/yoga.png);
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
-.date {
+.events-grid__time {
     font-size: 18px;
     font-weight: 700;
+    line-height: 150%;
     opacity: 0.6;
 }
-.name {
-    max-width: 260px;
+.events-grid__table {
+    padding: 30px;
+}
+.naevents-grid__title {
     font-size: 28px;
     font-weight: 700px;
-    margin-bottom: 0;
+    line-height: 125%;
 }
-.cover-text {
+.events-grid__footer {
     position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: end;
     bottom: 0;
+    align-items: end;
+}
+.events-grid__icon {
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/svg/add.svg);
+    background-repeat: no-repeat;
+    display: none;
+}
+.events-grid__text {
+    margin: 0;
     right: 0;
     font-size: 18px;
+    line-height: 150%;
+    text-align: center;
     padding: 10px 20px;
     background-color: #FBF138;
 }
-/* Раписание тренировок */
+.open-modal {
+    position: absolute;
+    top: 185px;
+    left: 30px;
+    opacity: 0;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FBF138;
+    text-transform: uppercase;
+    background: #2B3541;
+    box-shadow: 0px 13px 24px rgba(70, 86, 106, 0.28);
+    padding: 20px 49px;
+    transition: all .5s ease;
+}
+.events-grid__item:hover .open-modal {
+    opacity: 1;
+    cursor: pointer;
+    z-index: 1;
+    transition: all .5s ease;  
+}
+
+/* Расписание тренировок */
 .table {
     margin-top: 160px;
     display: flex;
@@ -252,9 +290,9 @@ h2 {
     align-items: center;
 }
 .table h2 {
-    max-width: 356px;
     padding-bottom: 38px;
     padding-top: 20px;
+    font-size: 40px;
 }
 .table p {
     font-size: 28px;
@@ -270,7 +308,6 @@ h2 {
     border: 1px solid rgba(43, 53, 65, 0.5);
     padding: 20px 30px;
     position: relative;
-    transition: 0.2s;
 }
 .timetable:nth-child(2) {
     grid-row-start: 2;
@@ -299,39 +336,41 @@ h2 {
 .timetable-text {
     font-size: 18px;
     font-weight: 700;
+    padding-top: 40px;
 }
+
 .body {
     height: 65px;
     width: 65px;
-    padding-bottom: 40px;
+    /*padding-bottom: 40px;*/
 }
 .jump {
     height: 107px;
     width: 67px;
-    padding-bottom: 40px;
+    /*padding-bottom: 40px;*/
 }
 .bottle {
     height: 85px;
     width: 42px;
-    padding-bottom: 40px;
+    /*padding-bottom: 40px;*/
 }
 .dumbbell {
     height: 50px;
     width: 91px;
-    padding-bottom: 40px;
+    /*padding-bottom: 40px;*/
 }
 .heart {
     height: 61px;
     width: 65px;
-    padding-bottom: 40px;
+    /*padding-bottom: 40px;*/
 }
 .weight {
     height: 66px;
     width: 58px;
-    padding-bottom: 40px;
+    /*padding-bottom: 40px;*/
 }
 .timetable:hover {
-    background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.7) 100%);
+    background: linear-gradient(180deg, rgba(251, 241, 56, .7) 0%, rgba(253, 249, 182, 0) 100%);
     box-shadow: 0px 13px 30px rgba(186, 180, 69, 0.2);
     border: none;
 }
@@ -339,12 +378,6 @@ h2 {
 .mail {
     background: #F3F3F3;
     margin-top: 160px;
-}
-.subscribe {
-    position: relative;
-    z-index: 0;
-    text-align: center;
-    padding: 80px 0 40px;
 }
 .subscribe::before {
     content: "";
@@ -355,9 +388,16 @@ h2 {
     display: block;
     position: absolute;
     top: 58px;
-    left: 214px;
+    left: 431px;
     z-index: -1;
     box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
+}
+.subscribe {
+    position: relative;
+    z-index: 0;
+    text-align: center;
+    padding: 80px 0 40px;
+    font-size: 40px;
 }
 .mail-text {
     margin: 0 auto;
@@ -473,10 +513,13 @@ h2 {
  }
  /* О компании */
  .about {
-    display: flex;
-    gap: 77px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin-top: 160px;
  }
+ .about-title{
+    font-size: 40px;
+}
  .about-text p {
     font-size: 18px;
     font-weight: 400;
@@ -504,11 +547,13 @@ h2 {
     box-shadow: 0px 13px 24px rgba(43, 53, 65, 0.2);
 }
 .about-img {
-    background-image: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.3) 45%), url(../images/trainer.png);
-    width: 581px;
-    height: 335px;
+    background-image: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%), url(../images/trainer.png);
+    width: 100%;
+    height: 100%;
     border: 1px solid rgba(43, 53, 65, 0.5);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .list {
     display: flex;
@@ -701,13 +746,16 @@ h2 {
         margin: 0;
     }
 /* Responsive */
-
+@media (min-width: 1001px) {
+    .footer-social-media {
+        display: none;
+    }
+}
 @media (min-width: 1001px) {
     .header-burger{
         display: none;
     }
 }
-
 @media (max-width: 1000px) {
     .container {
         max-width: 748px;
@@ -736,7 +784,7 @@ h2 {
         width: 40vw;
         height: 33vw;
         right: 0;
-        top: 116px;
+        top: 95px;
     }
     .content-box {
         flex: 0 0 359px;
@@ -773,41 +821,64 @@ h2 {
         height: 40px;
         background-size: contain;
     }
-    /* Расписание тренировок */
-    .table-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /*grid-template-rows: repeat(3, 224px);*/
-    }
+    
     /* ближайшие события*/
-    h2 {
+    .events {
+        margin-top: 40px;
+    }
+    .section-title {
         font-size: 26px;
     }
-    .event {
-        display: grid;
-        grid-template-areas: 
-        "1 2"
-        "3 3";
+    .yoga {
+        background-image: url(../images/yoga2.png); 
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
-    .cover-left:first-child {
-        grid-area: 1;
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 309px 336px;
     }
-    .cover-center:nth-child(2) {
-        grid-area: 2;
+    .yoga-mobile{
+        grid-column: 1 / 3;
+        grid-row: 2 / 4;
     }
-    .cover-left:last-child {
-        grid-area: 3;
+    .events-grid__time{
+        font-size: 12px;
     }
-
+    .events-grid__title{
+        font-size: 16px;
+    }
+    .events-grid__footer{
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .events-grid__text{
+        font-size: 12px;
+        padding: 6px 15px;
+    }
     .table p {
         font-size: 16px;
     }
-    .timetable-date {
-        font-size: 16px;
+    .events-grid__icon{
+        display: block;
+        cursor: pointer;
     }
-    .timetable-text {
-        font-size: 16px;
+    .open-modal {
+        display: none;
     }
-    
+    /* paсписание тренировок */
+    .table {
+        margin-top: 0;
+    }    
+    .table h2 {
+        font-size: 26px;
+    }
 /* подпитесь на рассылку */
 
     .subscribe {
@@ -840,7 +911,13 @@ h2 {
         margin-top: 40px;
         margin-bottom: 40px;
     }
+    .mail {
+        margin-top: 90px;
+    }
     /* о компании */
+    .about-title{
+        font-size: 26px;
+    }
     .about-text p {
         font-size: 16px;
     }
@@ -849,6 +926,7 @@ h2 {
     }
     .about {
         gap: 36px;
+        margin-top: 90px;
     }
     .about-img {
         width: 372px;
@@ -862,6 +940,7 @@ h2 {
         line-height: 150%;
     }
     /* footer */
+    
     .footer {
         margin-top: 94px;
     }
@@ -902,9 +981,47 @@ h2 {
         right: 97px;
     }
 }
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
     .button {
         display: none;
+    }
+}
+/* Расписание тренировок */
+@media (max-width: 900px) {
+    .table-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .timetable:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .timetable:nth-child(2) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    .timetable:nth-child(3) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .timetable:nth-child(4) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    .timetable:nth-child(5) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .timetable:nth-child(6) {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+    .timetable-date{
+        font-size: 16px;
+    }
+    .timetable-text{
+        font-size: 16px;
+        padding-top: 0px;
     }
 }
 @media (max-width: 770px) {
@@ -915,14 +1032,18 @@ h2 {
 
 @media (max-width: 720px) {
     .container {
-        max-width: 360px;
+        max-width: 560px;
     }
 
     .header-item {
         flex-basis: 50%;
     }
-    .content {
+    /*.content {
         flex-direction: column;
+    }*/
+    .visual-bg {
+        width: 30vw;
+        height: 50vw;
     }
     .content-title {
         font-size: 25px;
@@ -930,55 +1051,19 @@ h2 {
     .content-text {
         width: 340px;
     }
-    .content-text-link {
-        box-shadow: none;
-        padding: 20px 66px;
+    /* ближайшие события */
+    .events-grid__icon {
+        width: 24px;
+        height: 24px;
     }
-    .visual {
-        flex-direction: column;
+    .section-title {
+        font-size: 26px;
     }
-    .table-grid {
-        display: flex;
-        flex-direction: column;
-    }
-    .body {
-        height: 39px;
-        width: 39px;
-    }
-    .jump {
-        height: 53px;
-        width: 34px;
-    }
-    .bottle {
-        height: 45px;
-        width: 23px;
-    }
-    .dumbbell {
-        height: 25px;
-        width: 46px;
-    }
-    .heart {
-        height: 37px;
-        width: 39px;
-    }
-    .weight {
-        height: 40px;
-        width: 35px;
-    }
-    .table h2 {
-        max-width: 207px;
-    }
-    .timetable-img-text {
-        display: flex;
-        gap: 17px;
-    }
-    .timetable-date {
-        padding-bottom: 40px;
-    }
-    .mail {
-        padding: 10px;
-    }
+
     /*о компании*/
+    .about {
+        display: flex;
+    }
     .about-img {
         display: none;
     }
@@ -986,13 +1071,17 @@ h2 {
         display: flex;
         flex-direction: column;
         max-width: 223px;
+        gap: 0;
     }
     /* footer */
     .footer-item {
         display: block;
     }
     .footer-logo {
-        margin: 0 auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 40px;
     }
     .footer-list {
         padding: 0;
@@ -1007,3 +1096,70 @@ h2 {
     }
 
 }
+    /* расписание тренировок*/
+    @media (max-width: 550px){
+        .container {
+            max-width: 490px;
+        }
+        .content {
+            flex-direction: column;
+            gap: 65px;
+        }
+        .visual-bg {
+            width: 92vw;
+            height: 59vw;
+        }
+        .visual img {
+            width: 93vw;
+            height: 77vw;
+            top: 344px;
+        }
+        .table h2{
+            padding: 0;
+        }
+        .content-text-link {
+            box-shadow: none;
+            padding: 20px 66px;
+        }
+        .visual {
+            flex-direction: column;
+        }
+        .table-grid {
+            display: flex;
+            flex-direction: column;
+        }
+        .body {
+            height: 39px;
+            width: 39px;
+        }
+        .jump {
+            height: 53px;
+            width: 34px;
+        }
+        .bottle {
+            height: 45px;
+            width: 23px;
+        }
+        .dumbbell {
+            height: 25px;
+            width: 46px;
+        }
+        .heart {
+            height: 37px;
+            width: 39px;
+        }
+        .weight {
+            height: 40px;
+            width: 35px;
+        }
+        .timetable-img-text {
+            display: flex;
+            gap: 17px;
+        }
+        .timetable-date {
+            padding-bottom: 40px;
+        }
+        .mail {
+            padding: 10px;
+        }
+    }

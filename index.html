@@ -70,38 +70,61 @@
                 <a href="#timetable" class="button"></a>
             </div>
         </div>
-        <section class="container">
-            <h2>Ближайшие события</h2>
-            <div class="event">
-                <div class="cover-left">
-                    <div class="event-desk">
-                        <p class="date"> 29.06 - 4.07 </p>
-                        <p class="name"> Марафон выносливости </p>
-                        <a href="#" class="event-link"> записаться </a>
-                    </div> 
-                    <div class="cover-text"> марафон </div>
-                </div>
-                <div class="cover-center">
-                    <div class="event-desk">
-                        <p class="date"> 9.07 </p>
-                        <p class="name"> Как стать тренером? </p>
-                        <a href="#" class="event-link"> записаться </a>
-                    </div>    
-                    <div class="cover-text"> вебинар </div>
-                </div>    
-                <div class="cover-right">
-                    <div class="event-desk">
-                        <p class="date"> 15.07 </p>
-                        <p class="name"> Йога, как стиль жизни </p>
-                        <a href="#" class="event-link"> записаться </a>
+        <section class="events">
+            <div class="container">
+                <h2 class="section-title">Ближайшие события</h2>
+                <div class="events-grid">
+                    <div class="events-grid__item">
+                        <div class="events-grid__cover marathon">
+                            <div class="events-grid__gradient">
+                                <div class="events-grid__table">
+                                    <span class="events-grid__time">29.06 - 4.07</span>
+                                    <h3 class="events-grid__title">Марафон <br> выносливости</h3>
+                                </div>
+                                <div class="events-grid__footer">
+                                    <div class="events-grid__icon"></div>
+                                    <p class="events-grid__text">марафон</p>
+                                </div>
+                            </div>
+                            <button type="button" class="open-modal">записаться</button>
+                        </div> 
                     </div>
-                    <div class="cover-text"> вебинар </div>
+                    <div class="events-grid__item">
+                        <div class="events-grid__cover coahc">
+                            <div class="events-grid__gradient">
+                                <div class="events-grid__table">
+                                    <span class="events-grid__time">9.07</span>
+                                    <h3 class="events-grid__title">Как стать <br> тренером?</h3>
+                                </div>
+                                <div class="events-grid__footer">
+                                    <div class="events-grid__icon"></div>
+                                    <p class="events-grid__text">вебинар</p>
+                                </div>
+                            </div>
+                            <button type="button" class="open-modal">записаться</button>
+                        </div> 
+                    </div>
+                    <div class="events-grid__item yoga-mobile">
+                        <div class="events-grid__cover yoga">
+                            <div class="events-grid__gradient">
+                                <div class="events-grid__table">
+                                    <span class="events-grid__time">15.07</span>
+                                    <h3 class="events-grid__title">Йога, как стиль <br> жизни</h3>
+                                </div>
+                                <div class="events-grid__footer">
+                                    <div class="events-grid__icon"></div>
+                                    <p class="events-grid__text">вебинар</p>
+                                </div>
+                            </div>
+                            <button type="button" class="open-modal">записаться</button>
+                        </div> 
+                    </div>
                 </div>
             </div>
         </section>
         <section class="container">
             <div class="table" id="timetable">
-                <h2>Расписание тренировок</h2>
+                <h2>Расписание <br> тренировок</h2>
                 <p class="name"> 22 - 28 июня </p>
             </div>
             <div class="table-grid">
@@ -166,7 +189,7 @@
         <div class="about-company">
             <div class="about">
                 <div class="about-text">
-                    <h2>О компании</h2>
+                    <h2 class="about-title">О компании</h2>
                     <p>Наша компания является одной из немногих, кто предлагает фитнес услуги онлайн! Оставайтесь с&nbsp;нами и вы сами увидите, что мы проводим не&nbsp;только онлайн-тренировки.</p>
                     <div class="about-button">
                         <a href="#">Записаться</a>
