@@ -923,11 +923,6 @@ body {
         gap: 36px;
         margin-top: 90px;
     }
-    .about-img {
-        width: 372px;
-        height: 227px;
-        background-size: cover;
-    }
     .list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
