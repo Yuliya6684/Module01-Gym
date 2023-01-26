@@ -551,6 +551,7 @@ body {
     justify-content: space-between;
     font-size: 18px;
     margin-top: 60px;
+    gap: 67px;
 }
 .title-list{
     font-weight: 700;
@@ -747,6 +748,26 @@ body {
         display: none;
     }
 }
+@media (max-width: 1500px) {
+    .visual img {
+        right: 0;
+        width: 648px;
+        height: 576px;
+}
+    .visual-bg {
+        width: 38vw;
+        height: 617px;
+}
+    .header-item {
+        flex-basis: 60.5%;
+}
+    .content-title {
+        font-size: 42px;
+}
+    .content-box {
+        flex: 0 0 582px;
+}
+}
 @media (max-width: 1000px) {
     .button {
         display: none;
@@ -822,16 +843,14 @@ body {
     .section-title {
         font-size: 26px;
     }
+    .marathon {
+        background-image: url(../images/maraphon2.png);
+    }
+    .coahc {
+        background-image: url(../images/coahc.png);
+    }
     .yoga {
         background-image: url(../images/yoga2.png); 
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
     }
     .events-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1017,10 +1036,10 @@ body {
         height: 50vw;
     }
     .content-title {
-        font-size: 25px;
+        font-size: 24px;
     }
     .content-text {
-        width: 340px;
+        width: 315px;
     }
     /* ближайшие события */
     .events-grid__icon {
@@ -1082,7 +1101,7 @@ body {
     }
     .visual-bg {
         width: 92vw;
-        height: 59vw;
+        height: 62vw;
     }
     .visual img {
         width: 93vw;
@@ -1093,8 +1112,7 @@ body {
         padding: 0;
     }
     .content-text-link {
-        box-shadow: none;
-        padding: 20px 66px;
+        padding: 20px 55px;
     }
     .visual {
         flex-direction: column;
@@ -1137,4 +1155,38 @@ body {
     .mail {
         padding: 10px;
     }
+    /**/
+    .mail-text button {
+        padding: 22px 76px;
     }
+    .email input {
+        max-width: 244px;
+    }
+    }
+@media (max-width: 340px) {
+    .content-title {
+        font-size: 22px;
+    }
+    .content-text-link {
+        padding: 20px 47px;
+    }
+    .coahc {
+        background-image: url(../images/coahc2.png);
+    }
+    .checkbox:checked + label, .checkbox:not(:checked) + label {
+        padding-left: 18px;
+    }
+    .checkbox:not(:checked) + label::before {
+        width: 14px;
+        height: 14px;
+    }
+    .content-text {
+        width: 293px;
+    }
+    .visual-bg {
+        height: 52vw;
+    }
+    .footer-list {
+        gap: 20px;
+    }
+}
