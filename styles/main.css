@@ -106,7 +106,6 @@ body {
     margin-bottom: 23px;
 }
 .content-text{
-    width: 297px;
     padding-left: 90px;
 }
 .text{
@@ -145,7 +144,7 @@ body {
     height: 810px;
     position: absolute;
     right: -185px;
-    top: 40px;
+    bottom: 0;
 }
 /* Ближайшие события */
 .events {
@@ -242,6 +241,8 @@ body {
     background-image: url(../images/svg/add.svg);
     background-repeat: no-repeat;
     display: none;
+    background-size: contain;
+    background-position: center;
 }
 .events-grid__text {
     margin: 0;
@@ -430,11 +431,9 @@ body {
     color: rgba(43, 53, 65, 0.5);
 }
 .agreement a {
-    text-decoration: none;
     color: rgba(43, 53, 65, 0.5);
 }
 .agreement a:hover {
-    text-decoration: underline;
     color: rgba(43, 53, 65, 1);
 }
 .agreement {
@@ -555,6 +554,7 @@ body {
 }
 .title-list{
     font-weight: 700;
+    font-size: 18px;
 }
 .list-text {
     opacity: 0.6;
@@ -597,7 +597,16 @@ body {
     text-decoration: none;
     color: #2B3541;
     font-size: 14px;
-    font-weight: 400;    
+    font-weight: 400;  
+    border-bottom: 1px solid transparent;
+    padding-bottom: 10px;
+    transition: .3s; 
+}
+.footer-list a:hover {
+    border-bottom: 1px solid #2B3541;
+}
+.footer-img {
+    height: 30px;
 }
 .footer-social-icons {
     gap: 30px;
@@ -629,17 +638,6 @@ body {
     height: 30px;
     gap: 70px;
 }
-.footer-list a::after {
-    content: "";
-    height: 1px;
-    background: transparent;
-    width: 100%;
-    display: block;
-    margin-top: 10px;
-}
-.footer-list a:hover::after {
-    background: #2B3541;
-}
 .web a::before {
     content: "";
     position: absolute;
@@ -667,11 +665,9 @@ body {
     color: rgba(43, 53, 65, 0.3);
 }
 .footer-text a {
-    text-decoration: none;
     color: rgba(43, 53, 65, 0.3);
 }
 .footer-text a:hover {
-    text-decoration: underline;
     color: rgba(43, 53, 65, 1);
 }
 /* Modal */
@@ -769,9 +765,6 @@ body {
 }
 }
 @media (max-width: 1000px) {
-    .button {
-        display: none;
-    }
     .container {
         padding: 9px;
     }
@@ -795,10 +788,9 @@ body {
         gap: 19px;
     }
     .visual img {
-        width: 40vw;
-        height: 33vw;
+        width: 49vw;
+        height: 44vw;
         right: 0;
-        top: 95px;
     }
     .content-box {
         flex: 0 0 359px;
@@ -824,7 +816,6 @@ body {
     }
     .content-text {
         padding: 0;
-        width: 255px;
     }
     .visual-bg {
         width: 36vw;
@@ -906,9 +897,6 @@ body {
         height: 31px;
         top: 50px;
         left: -14px;
-    }
-    .email {
-        margin: 0 auto;
     }
     .email input {
         max-width: 300px;
@@ -1026,20 +1014,27 @@ body {
         padding-top: 0px;
     }
 }
+@media (max-width: 850px) {
+    .visual-bg {
+        height: 53vw;
+    }
+}
 @media (max-width: 720px) {
-
+    .content {
+        justify-content: space-around;
+    }
+    .content-box {
+        flex: 0 0 330px;
+    }
     .header-item {
         flex-basis: 50%;
     }
     .visual-bg {
-        width: 30vw;
-        height: 50vw;
+        width: 35vw;
+        height: 68vw;
     }
     .content-title {
         font-size: 24px;
-    }
-    .content-text {
-        width: 315px;
     }
     /* ближайшие события */
     .events-grid__icon {
@@ -1048,20 +1043,6 @@ body {
     }
     .section-title {
         font-size: 26px;
-    }
-
-    /*о компании*/
-    .about {
-        display: flex;
-    }
-    .about-img {
-        display: none;
-    }
-    .list {
-        display: flex;
-        flex-direction: column;
-        max-width: 223px;
-        gap: 0;
     }
     /* footer */
     .footer-item {
@@ -1085,7 +1066,37 @@ body {
     }
 
 }
+@media (max-width: 650px) {
+/*о компании*/
+    .about {
+        display: flex;
+    }
+    .about-img {
+        display: none;
+    }
+    .about-button a {
+        display: block;
+        text-align: center;
+    }
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
 @media (max-width: 550px){
+    .content-title {
+        font-size: 7vw;
+    }
+    .content-title-more {
+        font-size: 28px;
+        padding-top: 0;
+    }
+    .content-text-link {
+        display: block;
+        text-align: center;
+    }
     /* Ближайшие события */
     .events-grid {
         gap: 10px;
@@ -1099,20 +1110,19 @@ body {
         flex-direction: column;
         gap: 65px;
     }
+    .content-box {
+        flex: 0 0 347px;
+    }
     .visual-bg {
         width: 92vw;
-        height: 62vw;
+        /*height: 62vw;*/
     }
     .visual img {
         width: 93vw;
         height: 77vw;
-        top: 344px;
     }
     .table h2{
         padding: 0;
-    }
-    .content-text-link {
-        padding: 20px 55px;
     }
     .visual {
         flex-direction: column;
@@ -1147,7 +1157,10 @@ body {
     }
     .timetable-img-text {
         display: flex;
-        gap: 17px;
+        align-items: center;
+    }
+    .timetable-img {
+        width: 55px;
     }
     .timetable-date {
         padding-bottom: 40px;
@@ -1155,17 +1168,16 @@ body {
     .mail {
         padding: 10px;
     }
-    /**/
     .mail-text button {
-        padding: 22px 76px;
+        padding: 22px 73px;
     }
     .email input {
         max-width: 244px;
     }
-    }
-@media (max-width: 340px) {
-    .content-title {
-        font-size: 22px;
+}
+@media (max-width: 360px) {
+    .button {
+        display: none;
     }
     .content-text-link {
         padding: 20px 47px;
@@ -1174,19 +1186,25 @@ body {
         background-image: url(../images/coahc2.png);
     }
     .checkbox:checked + label, .checkbox:not(:checked) + label {
-        padding-left: 18px;
+        padding-left: 16px;
     }
     .checkbox:not(:checked) + label::before {
-        width: 14px;
-        height: 14px;
-    }
-    .content-text {
-        width: 293px;
+        width: 12px;
+        height: 12px;
     }
     .visual-bg {
         height: 52vw;
     }
     .footer-list {
         gap: 20px;
+    }
+    .timetable {
+        padding: 20px 10px;
+    }
+    .content-title {
+    font-size: 22px;
+    }
+    .title-list {
+        font-size: 16px;
     }
 }

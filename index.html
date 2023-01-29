@@ -131,42 +131,42 @@
                 <div class="timetable">
                     <div class="timetable-date"><p>22 июня, 10:00</p></div>
                     <div class="timetable-img-text">
-                        <img class="body" src="images/svg/body.svg"alt="body">
+                        <div class="timetable-img"><img class="body" src="images/svg/body.svg"alt="body"></div>
                         <div class="timetable-text"><p>Функциональный тренинг</p></div>
                     </div>
                 </div>
                 <div class="timetable">
                     <div class="timetable-date"><p>23 июня, 10:00</p></div>
                     <div class="timetable-img-text">
-                        <img class="jump" src="images/svg/jump.svg"alt="jump">
+                        <div class="timetable-img"><img class="jump" src="images/svg/jump.svg"alt="jump"></div>
                         <div class="timetable-text"><p>Силовой микс</p></div>
                     </div>
                 </div>
                 <div class="timetable">
                     <div class="timetable-date"><p>24 июня, 10:00</p></div>
                     <div class="timetable-img-text">
-                        <img class="bottle" src="images/svg/bottle.svg"alt="bottle">
+                        <div class="timetable-img"><img class="bottle" src="images/svg/bottle.svg"alt="bottle"></div>
                         <div class="timetable-text"><p>Body sculpt</p></div>
                     </div>
                 </div>
                 <div class="timetable">
                     <div class="timetable-date"><p>26 июня, 11:00</p></div>
                     <div class="timetable-img-text">
-                        <img class="dumbbell" src="images/svg/dumbbell.svg"alt="dumbbell">
+                        <div class="timetable-img"><img class="dumbbell" src="images/svg/dumbbell.svg"alt="dumbbell"></div>
                         <div class="timetable-text"><p>L.A.B.</p></div>
                     </div>
                 </div>
                 <div class="timetable">
                     <div class="timetable-date"><p>25 июня, 11:00</p></div>
                     <div class="timetable-img-text">
-                        <img class="heart" src="images/svg/heart.svg"alt="heart">
+                        <div class="timetable-img"><img class="heart" src="images/svg/heart.svg"alt="heart"></div>
                         <div class="timetable-text"><p>Дыхательные практики</p></div>
                     </div>
                 </div>
                 <div class="timetable">
                     <div class="timetable-date"><p>27 июня, 10:00</p></div>
                     <div class="timetable-img-text">
-                        <img class="weight" src="images/svg/weight.svg"alt="weight">
+                        <div class="timetable-img"><img class="weight" src="images/svg/weight.svg"alt="weight"></div>
                         <div class="timetable-text"><p>Комплексная разминка</p></div>
                     </div>
                 </div>
@@ -222,7 +222,7 @@
             <div class="footer-wrap">
                 <div class="footer-box">
                     <div class="footer-item">
-                        <div><img class="footer-logo" src="images/svg/logo.svg" alt="логотип"></div>
+                        <div class="footer-img"><img class="footer-logo" src="images/svg/logo.svg" alt="логотип"></div>
                         <div>
                             <ul class="footer-list">
                                 <li><a href="#">Мероприятия</a></li>
@@ -280,6 +280,23 @@
         function closeModal() {
             document.getElementById("modal").style.top = "-400px";
        }
-    </script>
+
+       // Smooth Scroll
+
+        const links = document.querySelectorAll(".button");
+
+        for (const link of links) {
+            link.addEventListener("click", clickHandler);
+        }
+
+        function clickHandler(e) {
+            e.preventDefault();
+            const href = this.getAttribute("href");
+
+            document.querySelector(href).scrollIntoView({
+            behavior: "smooth"
+            });
+        }
+    </script> 
 </body>
 </html>
