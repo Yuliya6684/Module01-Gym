@@ -396,13 +396,14 @@ body {
     max-width: 602px;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 .input {
     font-size: 18px;
     font-weight: 400;
     border: 1px solid transparent;
-    padding: 19px;
-    width: 310px;
+    padding: 19px 135px 19px 19px;
+    max-width: 372px;
 }
 .input:focus {
     outline: 1px solid #FBF138;
@@ -898,12 +899,14 @@ body {
         top: 50px;
         left: -14px;
     }
-    .email input {
-        max-width: 300px;
+    .input {
+        max-width: 340px;
+        padding: 19px 105px 19px 19px;
     }
     .mail-text {
         max-width: 340px;
         flex-direction: column;
+        gap: 0;
     }
     .agreement {
         padding-top: 14px;
@@ -1168,12 +1171,6 @@ body {
     .mail {
         padding: 10px;
     }
-    .mail-text button {
-        padding: 22px 73px;
-    }
-    .email input {
-        max-width: 244px;
-    }
 }
 @media (max-width: 360px) {
     .button {
@@ -1207,4 +1204,14 @@ body {
     .title-list {
         font-size: 16px;
     }
+    .content {
+    gap: 85px;
+    }
+    .input {
+        padding: 19px 55px 19px 19px;
+    }
+    .mail-text button {
+    padding: 22px 75px;
+    }
 }
+        
