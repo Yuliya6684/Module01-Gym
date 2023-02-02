@@ -396,14 +396,13 @@ body {
     max-width: 602px;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
 }
 .input {
     font-size: 18px;
     font-weight: 400;
     border: 1px solid transparent;
-    padding: 19px 135px 19px 19px;
-    max-width: 372px;
+    padding: 19px;
+    width: 100%;
 }
 .input:focus {
     outline: 1px solid #FBF138;
@@ -420,6 +419,8 @@ body {
     transition: 0.2s;
     border: none;
     margin-bottom: 80px;
+    display: block;
+    width: 100%;
 }
 .mail-text button:hover{
     background-color: #2B3541;
@@ -899,10 +900,6 @@ body {
         top: 50px;
         left: -14px;
     }
-    .input {
-        max-width: 340px;
-        padding: 19px 105px 19px 19px;
-    }
     .mail-text {
         max-width: 340px;
         flex-direction: column;
@@ -912,12 +909,14 @@ body {
         padding-top: 14px;
     }
     .mail-text button {
-        padding: 22px 100px;
         margin-top: 40px;
         margin-bottom: 40px;
     }
     .mail {
         margin-top: 90px;
+    }
+    .input {
+        box-sizing: border-box;
     }
     /* о компании */
     .about-title{
@@ -1206,12 +1205,6 @@ body {
     }
     .content {
     gap: 85px;
-    }
-    .input {
-        padding: 19px 55px 19px 19px;
-    }
-    .mail-text button {
-    padding: 22px 75px;
     }
 }
         
